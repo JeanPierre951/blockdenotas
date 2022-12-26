@@ -67,7 +67,7 @@ class _HomeState extends State<Home> {
       ),
       appBar: AppBar(
         title: Text(
-          'Notas Fire',
+          'Fire Nots',
           style: GoogleFonts.poppins(
             fontWeight: FontWeight.w700,
             fontSize: 21,
