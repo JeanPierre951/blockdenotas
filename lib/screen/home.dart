@@ -35,7 +35,7 @@ class _HomeState extends State<Home> {
     await SQLHelper.deleteItem(id);
     ScaffoldMessenger.of(context).showSnackBar(
       const SnackBar(
-        content: Text('Successfully deleted a note!'),
+        content: Text('Nota eliminada correctamente!'),
       ),
     );
     refreshNotes();
@@ -67,7 +67,7 @@ class _HomeState extends State<Home> {
       ),
       appBar: AppBar(
         title: Text(
-          'Simply Notes',
+          'Notas Fire',
           style: GoogleFonts.poppins(
             fontWeight: FontWeight.w700,
             fontSize: 21,
@@ -93,8 +93,8 @@ class _HomeState extends State<Home> {
                       MaterialPageRoute(
                         builder: (context) => FormNote(
                           id: notes[index]['id'],
-                          title: notes[index]['title'],
-                          description: notes[index]['description'],
+                          title: notes[index]['titulo'],
+                          description: notes[index]['descripcion'],
                         ),
                       ),
                     ).then(
@@ -126,7 +126,7 @@ class _HomeState extends State<Home> {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Text(
-                data['title'],
+                data['titulo'],
                 style: GoogleFonts.poppins(
                   fontWeight: FontWeight.w700,
                   fontSize: 18,
@@ -147,7 +147,7 @@ class _HomeState extends State<Home> {
             height: 5,
           ),
           Text(
-            data['description'],
+            data['descripcion'],
             style: GoogleFonts.poppins(
               fontWeight: FontWeight.w500,
               fontSize: 16,
