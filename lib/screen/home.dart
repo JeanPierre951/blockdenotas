@@ -11,11 +11,11 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  // all notes
+  
   List<Map<String, dynamic>> notes = [];
   bool isLoading = true;
 
-  // This function is used to fetch all data from the database
+  
   void refreshNotes() async {
     final data = await SQLHelper.getItems();
     setState(() {
@@ -27,10 +27,10 @@ class _HomeState extends State<Home> {
   @override
   void initState() {
     super.initState();
-    refreshNotes(); // Loading the diary when the app starts
+    refreshNotes(); 
   }
 
-  // Delete an item
+  
   void deleteItem(int id) async {
     await SQLHelper.deleteItem(id);
     ScaffoldMessenger.of(context).showSnackBar(

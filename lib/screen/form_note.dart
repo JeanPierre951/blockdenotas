@@ -24,7 +24,7 @@ class FormNote extends StatelessWidget {
       descriptionController.text = description;
     }
 
-    // Insert a new note to the database
+    
     Future<void> addItem() async {
       await SQLHelper.createItem(
         titleController.text,
@@ -32,7 +32,7 @@ class FormNote extends StatelessWidget {
       );
     }
 
-    // Update an existing note
+    
     Future<void> updateItem(int id) async {
       await SQLHelper.updateItem(
         id,
